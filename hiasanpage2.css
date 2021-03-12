@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+}
+
+header img{
+    width: 100%;
+    height: 200px;
+}
+
+nav{ /*Buat hias area Navigation*/
+    background-color: cadetblue;
+    text-align: center; /*Biar tulisan "Link" nya di tengah (klo ga mau, dihapus aja)*/
+    margin-bottom: 20px;
+}
+
+.form{ /*buat hias form (kotak Identity Form)*/
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+    margin: auto; /*marginnya otomatis ngikuti padding sama ukuran*/
+    padding-left: 25px; /*jarak konten ke kiri*/
+    padding-right: 25px; /*jarak konten ke kanan*/
+    border-radius: 5px;
+}
+.form h2{
+    text-align: center;
+    font-size: 27px;
+}
+
+table{
+    border: solid 2px; /*buat garis tepi dalam tablenya*/
+    margin-top: 75px;
+    border-radius: 5px;
+
+}
+
+tr td{
+    width: 250px;
+    padding: 25px;
+}
+
+.form h4{ /*buat hias tombol submit*/
+    text-align: center;
+    margin-top: 10px;
+}
+
+main{
+    margin-bottom: 25px;
+}
+
+footer{
+    background-color: yellow;
+    padding: 10px;
+}
+

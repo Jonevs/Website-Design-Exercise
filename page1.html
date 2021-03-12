@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+
+<head> <!--Ini pembuka tag head-->
+    <title>Page 1</title> 
+    <style> /*Ini pembuka tag style, yang kayak gini disebut Internal CSS (semua kode CSSnya ditaruh didalam tag style)*/
+
+        *{ /*Tanda bintang (baca: all) artinya CSSnya berlaku buat semua elemen yang ada di HTML ini*/
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box; 
+        } /*Tujuannya biar semua konten disini bisa full screen (coba kamu hapus, nanti jadi ada jarak dari ujung layar)*/
+
+        header{ /*Buat hias area Header*/           
+            display: flex;
+        }
+
+        header img{ /*Buat hias gambar logo West Papua di Header*/
+            width: 100%; /*Biar panjangnya pas di layar*/
+            height: 200px; 
+        }
+
+        nav{ /*Buat hias area Navigation*/
+            background-color: cadetblue;
+            text-align: center; /*Biar tulisan "Link" nya di tengah (klo ga mau, dihapus aja)*/
+        }
+
+        main{ /*Buat hias area Main*/
+            margin-top: 30px; /*Biar ada jarak dari Navigation ke Main*/
+        }
+
+        .row-1{ /*buat hias row-1 (baris 1, 2, 3, 4 di Main)*/
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; 
+            align-items: center;
+            padding: 5px;
+            margin-inline-start: 165px;
+            margin-inline-end: 170px;
+        }
+
+        .col-1{ /*buat hias col-1 (kotak gambar)*/
+            width: 300px; 
+            height: 200px;
+            border-style: solid; /*Biar kotaknya ada garis tepinya, klo ga mau bisa dihapus*/
+            display: inline-block; /*biar margin sama paddingnya bisa diatur*/
+            margin-bottom: 20px; /*Jarak kotak col-1 kebawah = 20px*/
+        }
+
+        .col-1 img{ /*buat hias gambar yang ada di dalem kotak col-1*/
+            width: 294px;
+            height: 194px;
+        } /*tujuannya cuma buat ngepasin ukurannya di dalem kotak*/
+
+        .col-2{ /*buat hias col-2 (kotak text)*/
+            background-color: gainsboro;
+            width: 600px;
+            height: 200px;
+            border-style: solid;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .col-2 h3{ /*buat hias tulisan judul di dalem kotak col-2*/
+            text-align: center; /*biar judul e di tengah*/
+            margin-top: 2px; /*buat jarak judul ke garis tepi atas*/
+            text-decoration: underline; /*buat kasik garis bawah di judulnya*/
+        }
+
+        .col-2 p{ /*buat hias tulisan deskripsi di dalem kotak col-2*/
+            margin-left: 5px; /*jarak tulisan ke garis tepi kiri*/
+            margin-right: 5px; /*jarak tulisan ke garis tepi kanan*/
+        }
+
+        footer{ /*buat hias bagian Footer*/
+            background-color: yellow;
+            padding: 10px;
+        }
+    </style> <!--Ini penutup tag style-->
+</head> <!--Ini penutup tag head-->
+
+<body> <!--Ini pembuka tag body-->
+    <header>
+        <img src="img/Photographer General LinkedIn Banner.png"> <!--Buat ambil gambar di folder img (cara nulisnya: nama folder/nama file) -->
+    </header>
+
+    <nav>
+        <h3><a href="page2.html">Link</a></h3> <!--Supaya kalau diteken bisa ke Page 2-->
+    </nav>
+
+    <main>
+        <div class="row-1">
+            <div class="col-1">
+                <img src="img/hipwee-bakar-batu2.jpg">
+            </div>
+
+            <div class="col-2">
+                <h3>Stone Burning Ceremony</h3><br>
+                <p>The Grilled Stone Party has a unique and distinctive tradition of being grateful. and is a traditional Papuan ritual performed as a form of gratitude for abundant blessings, weddings, welcoming great guests, and also as a funeral ceremony. In addition, this ceremony is also carried out as proof of peace after the war between tribes.
+                    The Stone Grilled Party procession usually consists of three stages, namely the preparation stage, roasting pork, and eating together
+                </p>
+            </div>
+        </div>
+
+        <div class="row-1">
+            <div class="col-2">
+                <h3>Finger Cut Ceremony</h3><br>
+                <p>This tradition is carried out when a family member (husband, wife, father, mother, sister, brother) dies. They think that cutting off a finger is a symbol of the pain and pain of someone who has lost part of their family. Can be interpreted that fingers are a symbol of harmony, unity and strength in humans and in a family.</p>
+            </div>
+
+            <div class="col-1">
+                <img src="img/Potong-Jari.jpg">
+            </div>
+        </div>
+
+        <div class="row-1">
+            <div class="col-1">
+                <img src="img/ulatsagu-1583897332.jpg">
+            </div>
+
+            <div class="col-2">
+                <h3>Sago Caterpillar Satay</h3><br>
+                <p>This traditional West Papuan food can seem quite extreme and ridiculous to the average Indonesian people. But believe me, by the hands of the Papuan people, this caterpillar can turn into a dish of the most delicious satay-shaped food and is rich in beneficial nutrients for the body.</p>
+            </div>
+        </div>
+
+        <div class="row-1">
+            <div class="col-2">
+                <h3>Matoa Fruit Ice</h3><br>
+                <p>This one typical West Papuan drink is ice with a mixture of red kolang kaling, green jelly, Matoa fruit, and other spices that are often found in Papua. When finished then decorated with lime and pandan leaves. Taste? Sour, sweet, and fresh.</p>
+            </div>
+
+            <div class="col-1">
+                <img src="img/70619235-1379390548878938-1620247695629237138-n-1-c6be70ff379cb13f2f72ac4f7f4bc98c.jpg">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h2>Name and ID</h2>
+    </footer>
+
+</body> <!--Ini penutup tag body-->
+
+</html>
