@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Contact Us</title>
-    <link rel="stylesheet" href="no1.css">
-    <script src="no1.js"></script>
+    <link rel="stylesheet" href="no1.css"> <!--External CSS, dengan cara panggil file "no1.css" yang berisi kode css-->
+    <script src="no1.js"></script> <!--External JavaScript, dengan cara panggil file "no1.js" yang berisi kode javascript-->
 </head>
 
 <body>
-    <div class="bingkai"> 
+    <div class="bingkai"> <!--Buat nyimpan semua elemen di satu bingkai-->
         <h2>Contact Us</h2>
         <p>We'd love to hear from you! Leave a message below and we will get in touch with you shortly.</p>
-        <div id="error_message"></div>
-        <form id="form" onsubmit="return validation();">
+        <div id="error_message"></div> <!--Ini nanti buat tempatnya error message, memang kosong, nanti baru ada isinya waktu di cek di file JavaScript-->
+        <form id="form" onsubmit="return validation();"> <!--Ini buat bikin form, onsubmit artinya saat kita submit, kita akan jalankan fungsi validation() yg ada di file JavaScript-->
 
-            <div class="input_field">
+            <div class="input_field"> <!--Nama-->
                 <label>Name</label>
                 <input type="text" id="name"><br>
             </div>
 
-            <div class="input_field">
+            <div class="input_field"> <!--Email-->
                 <label>E-mail</label>
                 <input type="text" id="email"><br>              
             </div>
   
-            <div class="input_field">
+            <div class="input_field"> <!--Phone-->
                 <label>Phone</label>
                 <input type="text" id="phone"><br>               
             </div>
   
+            <div class="input_field"> <!--Contact me by-->
+                <label>Contact me by</label>
+                <input type="radio" id="contact_email" name="contact" value="contact_email" checked> <!--Email-->
+                <label for="email">Email</label>
+                <input type="radio" id="contact_phone" name="contact" value="contact_phone"> <!--Phone-->
+                <label for="phone">Phone</label>
+            </div>
     
-            <label>Contact me by</label>
-            <input type="radio" id="contact_email" name="contact" value="contact_email" checked> 
-            <label for="email">Email</label>
-            <input type="radio" id="contact_phone" name="contact" value="contact_phone">
-            <label for="phone">Phone</label>
-    
-            <label>Question for</label>
-            <select type="text" name="question">
-                <option>Sales</option>
-                <option>Manager</option>
-            </select><br>
-    
-            <label>Message</label><br>
-            <textarea id="message" rows="10" cols="30"></textarea><br>
-    
-            <label>
-                <input type="submit" value="Submit" name="submit">
-            </label>
-    
+            <div class="input_field"> <!--Question for-->
+                <label>Question for</label>
+                <select type="text" name="question">
+                    <option>Sales</option> <!--Sales-->
+                    <option>Manager</option> <!--Manager-->
+                </select>
+            </div>
+
+            <div class="input_field"> <!--Message-->
+                <label>Message</label><br>
+                <textarea id="message" rows="10" cols="30"></textarea>
+            </div>
+
+            <a><input type="submit" value="Submit" name="submit"></a> <!--Tombol Submit-->
         </form>
     </div>
 </body>

@@ -6,81 +6,80 @@
 </head>
 
 <body>
-    <h3>Lunch Selections</h3>
+    <h3>Lunch Selections</h3> <!--Judulnya yang ditampilkan di layar-->
 
-    <input type="checkbox" class="check" value="FriedChicken" id="fc">
-    <label for="fc">Fried Chicken (RM 4.00)</label><br>
+    <input type="checkbox" class="check" value="FriedChicken" id="fc"> 
+    <label>Fried Chicken (RM 4.00)</label><br>
 
     <input type="checkbox" class="check" value="ChickenWings" id="cw">
-    <label for="cw">Chicken Wings (RM 2.00)</label><br>
+    <label>Chicken Wings (RM 2.00)</label><br>
 
     <input type="checkbox" class="check" value="ChickenBurger" id="cb">
-    <label for="cb">Chicken Burger (RM 3.00)</label><br>
+    <label>Chicken Burger (RM 3.00)</label><br>
 
     <input type="checkbox" class="check" value="RussianSolid" id="rs">
-    <label for="sr">Russian Solid (RM 8.00)</label><br>
+    <label>Russian Solid (RM 8.00)</label><br>
 
     <input type="checkbox" class="check" value="Pizza" id="p">
-    <label for="p">Pizza (RM 10.00)</label><br><br>
+    <label>Pizza (RM 10.00)</label><br><br>
 
-    <a href="#" onclick="getValue();">Submit</a>
+    <a href="#" onclick="getValue();">Submit</a> <!--Tombol submitnya-->
 
-    <script>
-        function getValue(){
+    <script> //Internal JavaScript -> semua coding JS ada di dalam tag <script>
+        function getValue(){ //Fungsi pertama, buat tampilin message / alertnya
 
-            var checks = document.getElementsByClassName("check");
-            var order='';
-            var sum=0;
+            var checks = document.getElementsByClassName("check"); //buat variabel namanya checks, untuk ambil nilai yang dicentang 
+            var order=''; //buat variabel penampung nama-nama makanan yang dipilih
+            var sum=0; //buat variabel penampung harga total makanan yang dipilih
             
-
-            for(i = 0; i < 5; i++)
+            for(i = 0; i < 5; i++) //Konsep "FOR", intinya buat ngecek satu persatu semua pilihan menu tadi (bacanya urut dari Fried Chicken sampai Pizza)
             {
-                if(checks[i].checked === true)
+                if(checks[i].checked === true) //jika menu ke-i itu tercek / tercentang
                 {
-                    order = order + checks[i].value + " ";
-                    price = getPrice(checks[i].id);
-                    sum = sum + price;
-                }
+                    order = order + checks[i].value + " "; //maka valuenya menu tersebut (a.k.a Nama Menunya), kita simpan dan akan kita tampilkan di message
+                    price = getPrice(checks[i].id); //buat tau harganya, kita pergi ke fungsi kedua yaitu getPrice() --> cara bacanya langsung ke fungsi getPrice()
+                    sum = sum + price; //nilai pricenya sudah tau dari fungsi getPrice(), maka nilai sum / total = sum + price
+                } //kalau sudah, ulang ke FOR lagi, terus if lagi, dst, sampai menu ke 5 
 
             }
             
-            alert("Your order: " + order +"\nTotal price: RM " + sum + ".00" );
+            alert("Your order: " + order +"\nTotal price: RM " + sum + ".00" ); //akhirnya kalau kelima menu sudah dicek, tampilkan pesan alert 
         }
 
-        function getPrice(a){
-            var price;
+        function getPrice(a){ //Fungsi buat tentuin harga per menu
+            var price; //buat variabel penampung harga
 
-            if(a == "fc")
+            //Konsep "IF"
+            if(a == "fc") //jika id yang masuk = fc (Fried Chicken)
             {
-                price = 4;
-                return price;
+                price = 4; //maka harganya = 4 ringgit
+                return price; //kembalikan harganya ke fungsi sebelumnya
+            }
+ 
+            if(a == "cw") //jika id yang masuk = cw (Chicken Wings)
+            {
+                price = 2; //maka harganya = 2 ringgit
+                return price; //kembalikan harganta ke fungsi sebelumnya
             }
 
-            if(a == "cw")
+            if(a == "cb") //jika id yang masuk = cb (Chicken Burger)
             {
-                price = 2;
-                return price;
+                price = 3; //maka harganya = 3 ringgit
+                return price; //kembalikan harganya ke fungsi sebelumnya
             }
 
-            if(a == "cb")
+            if(a == "rs") //jika id yang masuk = rs (Russian Solid)
             {
-                price = 3;
-                return price;
+                price = 8; //maka harganya = 8 ringgit
+                return price; //kembalikan harganya ke fungsi sebelumnya
             }
 
-            if(a == "rs")
+            if(a == "p") //jika id yang masuk = p (Pizza)
             {
-                price = 8;
-                return price;
-            }
-
-            if(a == "p")
-            {
-                price = 10;
-                return price;
+                price = 10; //maka harganya = 10 ringgit
+                return price; //kembalikan harganya ke fungsi sebelumnya
             }
         }
-
     </script>
 
     
