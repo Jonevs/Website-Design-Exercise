@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style> /*Ini Internal CSS*/
+        .row{ 
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+        }
+
+        img{
+            width: 400px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row"> 
+        <img src="triangle.png" onclick="changeTriangle()" id="triangle"> <!--onclick gunanya supaya waktu di klik, alankan fungsi changeTriangle()-->
+        <img src="rectangle.png" onclick="changeRectangle()" id="rectangle">
+        <img src="circle.png" onclick="changeCircle()" id="circle">
+    </div>
+
+    <script> //ini Internal JS
+        function changeTriangle() //fungsi buat ganti gambar Triangle
+        {
+            var image = document.getElementById("triangle"); //buat variabel image buat tampung objek Triangle
+            if(image.src.match("triangle.png")) //kondisi = jika objek tersebut sumber gambarnya adalah triangle.png 
+            {
+                alert("A triangle was clicked"); //maka tampilkan pesan alert 
+                image.src = "pizza.png"; //ganti image jadi pizza.png
+           
+            }
+            else //jika kondisi diatas tidak terpenuhi (dengan kata lain gambarnya bukan triangle.png -- pasti pizza.png)
+            {
+                alert("A pizza was clicked");  //maka tampilkan pesan alert
+                image.src = "triangle.png"; //ganti image jadi triangle.png
+            }
+        }
+
+        function changeRectangle() //cara kerjanya persis fungsi yg diatas
+        {
+            var image = document.getElementById("rectangle");
+            if(image.src.match("rectangle.png"))
+            {
+                alert("A rectangle was clicked");
+                image.src = "spongebob.png";
+            }
+            else
+            {
+                alert("Spongebob was clicked");
+                image.src = "rectangle.png";
+            }
+        }
+
+        function changeCircle() //cara kerjanya persis fungsi yg diatas
+        {
+            var image = document.getElementById("circle");
+            if(image.src.match("circle.png"))
+            {
+                alert("A circle was clicked");
+                image.src = "sun.png";
+            }
+            else
+            {
+                alert("Baby Sun was clicked");
+                image.src = "circle.png";
+            }
+        }
+    </script>
+
+</body>
+</html> 
