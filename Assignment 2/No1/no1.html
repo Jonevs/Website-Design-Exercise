@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="no1.css">
+    <script src="no1.js"></script>
+</head>
+
+<body>
+    <div class="bingkai"> 
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Leave a message below and we will get in touch with you shortly.</p>
+        <div id="error_message"></div>
+        <form id="form" onsubmit="return validation();">
+
+            <div class="input_field">
+                <label>Name</label>
+                <input type="text" id="name"><br>
+            </div>
+
+            <div class="input_field">
+                <label>E-mail</label>
+                <input type="text" id="email"><br>              
+            </div>
+  
+            <div class="input_field">
+                <label>Phone</label>
+                <input type="text" id="phone"><br>               
+            </div>
+  
+    
+            <label>Contact me by</label>
+            <input type="radio" id="contact_email" name="contact" value="contact_email" checked> 
+            <label for="email">Email</label>
+            <input type="radio" id="contact_phone" name="contact" value="contact_phone">
+            <label for="phone">Phone</label>
+    
+            <label>Question for</label>
+            <select type="text" name="question">
+                <option>Sales</option>
+                <option>Manager</option>
+            </select><br>
+    
+            <label>Message</label><br>
+            <textarea id="message" rows="10" cols="30"></textarea><br>
+    
+            <label>
+                <input type="submit" value="Submit" name="submit">
+            </label>
+    
+        </form>
+    </div>
+</body>
+</html>

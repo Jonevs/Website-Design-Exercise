@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Lunch</title>
+</head>
+
+<body>
+    <h3>Lunch Selections</h3>
+
+    <input type="checkbox" class="check" value="FriedChicken" id="fc">
+    <label for="fc">Fried Chicken (RM 4.00)</label><br>
+
+    <input type="checkbox" class="check" value="ChickenWings" id="cw">
+    <label for="cw">Chicken Wings (RM 2.00)</label><br>
+
+    <input type="checkbox" class="check" value="ChickenBurger" id="cb">
+    <label for="cb">Chicken Burger (RM 3.00)</label><br>
+
+    <input type="checkbox" class="check" value="RussianSolid" id="rs">
+    <label for="sr">Russian Solid (RM 8.00)</label><br>
+
+    <input type="checkbox" class="check" value="Pizza" id="p">
+    <label for="p">Pizza (RM 10.00)</label><br><br>
+
+    <a href="#" onclick="getValue();">Submit</a>
+
+    <script>
+        function getValue(){
+
+            var checks = document.getElementsByClassName("check");
+            var order='';
+            var sum=0;
+            
+
+            for(i = 0; i < 5; i++)
+            {
+                if(checks[i].checked === true)
+                {
+                    order = order + checks[i].value + " ";
+                    price = getPrice(checks[i].id);
+                    sum = sum + price;
+                }
+
+            }
+            
+            alert("Your order: " + order +"\nTotal price: RM " + sum + ".00" );
+        }
+
+        function getPrice(a){
+            var price;
+
+            if(a == "fc")
+            {
+                price = 4;
+                return price;
+            }
+
+            if(a == "cw")
+            {
+                price = 2;
+                return price;
+            }
+
+            if(a == "cb")
+            {
+                price = 3;
+                return price;
+            }
+
+            if(a == "rs")
+            {
+                price = 8;
+                return price;
+            }
+
+            if(a == "p")
+            {
+                price = 10;
+                return price;
+            }
+        }
+
+    </script>
+
+    
+</body>
+</html>

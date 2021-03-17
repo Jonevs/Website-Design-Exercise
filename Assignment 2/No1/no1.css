@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bingkai{
+    background: whitesmoke;
+    position: absolute;
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+.bingkai h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bingkai p{
+    text-align: justify;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.input_field{
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.bingkai .input_field label{
+   line-height: 1.2;
+   position: absolute;
+}
+
+.bingkai .input_field input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    line-height: 1.2;
+    display: block;
+}
+
