@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Page 5</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="page1.html">Home</a></li>
+                    <li><a href="page2.html">About Me</a></li>
+                    <li><a href="page3.html">Resume</a></li>
+                    <li><a href="page4.html">My Portfolio</a></li>
+                    <li><a href="">Contact Me</a></li>
+                    <li><a href="page6.html">My Favourites</a></li>
+                    <li><a href="page7.html">Math</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="bingkai"> 
+        <h2>Contact Me</h2>
+        
+        <div id="error_message"></div> 
+        <form id="form" onsubmit="return validation();"> 
+
+            <div class="input_field"> 
+                <label>Name</label>
+                <input type="text" id="name"><br>
+            </div>
+
+            <div class="input_field"> 
+                <label>Phone Number</label>
+                <input type="text" id="phone"><br>              
+            </div>
+  
+            <div class="input_field"> 
+                <label>Email Address</label>
+                <input type="text" id="email"><br>               
+            </div>
+
+            <div class="input_field"> 
+                <label>Gender</label>
+                <input type="radio" id="male" name="gender" value="male" checked> <!--Email-->
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female"> <!--Phone-->
+                <label for="female">Female</label>             
+            </div>
+
+            <div class="input_field"> 
+                <label>Country</label>
+                <select type="text" name="country">
+                    <option>Malaysia</option> 
+                    <option>Indonesia</option> 
+                    <option>Other</option> 
+                </select>    
+            </div>
+
+            <div class="input_field">
+                <label for="date">Date</label>
+                <input type="datetime-local" id="date" name="date">
+            </div>
+
+            <div class="input_field"> 
+                <label>Message</label><br>
+                <textarea id="message" rows="10" cols="48"></textarea>
+            </div>
+
+            <a><input type="submit" value="Submit" name="submit"></a> 
+        </form>
+    </div>
+
+</body>
+
+</html>
